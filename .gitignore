@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# virtual env
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# output files
+*.tsv
+*.csv
+*.log
+
+# large raw cnr files (optional)
+*.cnr
+

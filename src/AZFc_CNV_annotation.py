@@ -57,11 +57,11 @@ def known_pheno_annotation(d):
 
     for i in ANNOTATION.index:
         d.loc[
-            ((d[ANNOTATION.loc[i].keys()]) == ANNOTATION.loc[i]).all(1), 'HighConfidence_CNV'] = i
+            ((d[ANNOTATION.loc[i].keys()]) == ANNOTATION.loc[i]).all(axis=1), 'HighConfidence_CNV'] = i
         d.loc[
             (abs(d[AZFc] - ANNOTATION.loc[i][AZFc]).sum(axis=1) == 1)
-            & ((d[ANNOTATION_DICT[i].keys()] == ANNOTATION.loc[i][ANNOTATION_DICT[i].keys()]).all(1))
-            | ((d[ANNOTATION.loc[i].keys()]) == ANNOTATION.loc[i]).all(1)
+            & ((d[ANNOTATION_DICT[i].keys()] == ANNOTATION.loc[i][ANNOTATION_DICT[i].keys()]).all(axis=1))
+            | ((d[ANNOTATION.loc[i].keys()]) == ANNOTATION.loc[i]).all(axis=1)
             , 'LowConfidence_CNV'] = i
     return d
 

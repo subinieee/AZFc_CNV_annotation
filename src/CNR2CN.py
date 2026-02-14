@@ -23,7 +23,7 @@ def main():
     output_dir = cnr_path / "output"
     output_dir.mkdir(parents=True, exist_ok=True)
     output_name = args.output_name
-    cnr_files = list(cnr_path.glob('*cnr'))
+    cnr_files = list(cnr_path.glob('*.cnr'))
 
     
     #Create a dictionary for AZFc Amplicon : referenece copy number
@@ -67,9 +67,9 @@ def main():
         cnr_processed.loc[cnr_files.index(i), 'sY1291'] = math.log2((2 ** (temp.loc[temp.gene.str.contains('sY1291'), 'log2'])).dropna().mean())
         cnr_processed.loc[cnr_files.index(i), 'gr/gr'] = math.log2((2 ** (temp.loc[temp.gene.str.contains('gr/gr'), 'log2'])).dropna().mean())
         for k in amplicon_regions.keys():
-            for j in range(0, len(amplicon_regions[k])):
-                cnr_processed.loc[i, k] = round(copy_numbers[k] * (
-                            2 ** (temp.loc[temp.gene.str.contains('|'.join(amplicon_regions[k])), 'log2']).mean()))
+            cnr_processed.loc[i, k] = round(copy_numbers[k] * (
+                            2 ** (temp.loc[temp.gene.str.contains('|'.join(amplicon_regions[k])), 'log2']).mean())
+                            )
     cnr_processed.to_csv(cnr_path / f"output/{output_name}_cnr_processed.tsv", sep="\t", index=False)
     
 

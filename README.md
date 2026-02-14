@@ -4,8 +4,10 @@ Utilities for converting CNVkit `.cnr` outputs into integer copy‑number
 estimates across AZFc amplicons and annotating known AZFc CNV
 signatures, including gr/gr deletions.
 
-This pipeline was developed for AZFc structural variant analysis in
-testicular germ cell tumour (TGCT) and population sequencing datasets.
+This pipeline was developed to support the analysis described in:
+
+**Association of Y-chromosomal gr/gr deletions with testicular germ cell tumour: whole-genome analysis of 198,306 individuals**
+
 
 ------------------------------------------------------------------------
 

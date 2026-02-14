@@ -126,15 +126,15 @@ After running the pipeline:
 
 Copy number inference:
 
-1.  Convert log2 ratio to linear scale\
-2.  Scale relative to reference copy number\
-3.  Average across bins for each amplicon\
+1.  Convert log2 ratio to linear scale
+2.  Scale relative to reference copy number
+3.  Average across bins for each amplicon
 4.  Round to nearest integer
 
 CNV annotation:
 
-1.  Compare inferred copy numbers to known AZFc signatures\
-2.  Assign high‑confidence matches\
+1.  Compare inferred copy numbers to known AZFc signatures
+2.  Assign high‑confidence matches
 3.  Assign low‑confidence matches for near signatures
 
 ------------------------------------------------------------------------

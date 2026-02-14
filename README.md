@@ -43,10 +43,10 @@ pip install -r requirements.txt
 
 Input files must be CNVkit `.cnr` files containing at minimum:
 
-  Column   Description
-  -------- -------------------------------
-  gene     Amplicon or marker identifier
-  log2     Log2 copy‑number ratio
+  | Column  | Description                     |
+  | ------- | :------------------------------:|
+  | gene    |  Amplicon or marker identifier  |
+  | log2    |  Log2 copy‑number ratio         |
 
 Each `.cnr` file represents one sample.
 
@@ -76,9 +76,9 @@ and generate:
 
 Example output:
 
-  SAMPLE_ID         IR1   IR5   Blue   Teal   Green   Red   Gray   Yellow
-  ----------------- ----- ----- ------ ------ ------- ----- ------ --------
-  HG38_Y\_HG00096   2     4     4      2      3       2     2      1
+  |   SAMPLE_ID    | IR1 | IR5 | Blue | Teal | Green | Red | Gray | Yellow |
+  | -------------- | --- | --- | ---- | ---- | ----- | --- |  ---- | ----- |
+  | HG38_Y_HG00096 |  2  |  4  |   4  |  2   |   3   |  2  |   2   |   1   |
 
 ------------------------------------------------------------------------
 
@@ -97,10 +97,10 @@ Output will be saved to:
 
 Additional columns added:
 
-  Column               Description
-  -------------------- -------------------------------------
-  HighConfidence_CNV   Exact CNV signature match
-  LowConfidence_CNV    Near match (±1 amplicon difference)
+  | Column              | Description
+  | --------------------| -------------------------------------
+  | HighConfidence_CNV  | Exact CNV signature match
+  | LowConfidence_CNV   | Near match (±1 amplicon difference)
 
 ------------------------------------------------------------------------
 
